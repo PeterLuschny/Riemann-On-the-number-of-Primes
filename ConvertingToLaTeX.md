@@ -3,7 +3,7 @@ It is very easy to convert the html file into a LaTeX file:
 
 (1) Save a copy of the Html file and change the file-suffix to ".tex".
     Delete all lines before the first line of Riemann's text starting
-    "<p>The best way to express ..." and after the last line of the text.
+    "The best way to express ..." and after the last line of the text.
 
 (2) Use an editor to
 
