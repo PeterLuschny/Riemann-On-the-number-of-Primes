@@ -30,21 +30,25 @@ To this end, we set the following goals:
 
     (a) the forgotten sum sign on page 4 of the Monthly Report of the
         Academy is inserted, as it is in the collected works.
+
     (b) Typos like (x)psi -> psi(x).
+
     (c) Also the well-known 'lapsus calami' is corrected,
         so log xi(0) is set to -log 2.
 
 (4) Use of modern function names. This means three things:
 
-   (a) The factorial function, which Riemann denotes by ProductPi is
-       replaced by Legendre's Gamma function.
-       [ProductPi(x) -> Gamma(x+1)]
-   (b) pi(x) denotes the number of primes less than or equal to x as
-       it is common nowadays. Riemann calls this function F(x).
-       [F(x) -> pi(x)]
-   (c) Pi(x) is defined as Sum_{n>=1} pi((1/n) x^(1/n)). Riemann calls
-       this function f(x).
-       [f(x) -> Pi(x)]
+    (a) The factorial function, which Riemann denotes by ProductPi is
+        replaced by Legendre's Gamma function.
+        [ProductPi(x) -> Gamma(x+1)]
+
+    (b) pi(x) denotes the number of primes less than or equal to x as
+        it is common nowadays. Riemann calls this function F(x).
+        [F(x) -> pi(x)]
+
+    (c) Pi(x) is defined as Sum_{n>=1} pi((1/n) x^(1/n)). Riemann calls
+        this function f(x).
+        [f(x) -> Pi(x)]
 
    For example this notation is used by Ricardo Pérez-Marco in "Notes
    on the Riemann Hypothesis".
@@ -56,4 +60,4 @@ To this end, we set the following goals:
 (6) If you discover errors or have suggestions for improvement
     please send a pull request.
 
-Here you can see a [preview](http://luschny.de/math/zeta/OnTheNumberOfPrimesLessThanAGivenMagnitude.html)
+Here you can see a [preview](http://luschny.de/math/zeta/OnTheNumberOfPrimesLessThanAGivenMagnitude.html).
