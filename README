@@ -28,14 +28,14 @@ To this end, we set the following goals:
 
 (3) The known minor errors are *silently* corrected. This means in
     particular:
-    
+
     (a) the forgotten sum sign on page 4 of the Monthly Report of the
         Academy is inserted, as it is in the collected works.
     (b) Typos like (x)psi -> psi(x).
     (c) Also the well-known 'lapsus calami' is corrected,
         so log xi(0) is set to -log 2.
 
-4) Use of modern function names. That means three things:
+(4) Use of modern function names. This means three things:
 
    (a) The factorial function, which Riemann denotes by ProductPi is
        replaced by Legendre's Gamma function.
