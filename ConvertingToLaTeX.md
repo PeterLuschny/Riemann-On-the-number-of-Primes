@@ -30,4 +30,4 @@ It is very easy to convert the html file into a LaTeX file:
     at the end of the file.
 
 (4) Save the file and compile. This should result in a pdf-file
-    assuming you have a working TeX environment.
+    assuming you have a working TeX environment. 
