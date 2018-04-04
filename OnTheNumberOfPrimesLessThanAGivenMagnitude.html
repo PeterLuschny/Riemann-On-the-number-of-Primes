@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html><head>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<meta name='viewport' content='width=device-width'>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="us-eng">
+<meta name="date" content="2018-03-26">
+<meta name='author' content='Peter Luschny'>
+<meta name='description' content='Bernhard Riemann Zeta Function.'>
+<meta name='keywords' content='Bernhard Riemann, mathematics, number of primes, zeta function'>
+
+<title>On the Number of Primes less than a given Magnitude</title>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    "HTML-CSS": {
+     availableFonts: [],
+     preferredFont: null,
+     webFont: "Neo-Euler",
+     scale: 90
+    },
+    tex2jax: {inlineMath: [["$","$"]],
+    displayMath: [['\\[','\\]']]}
+});
+</script>
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<style type="text/css">
+
+@media all   {.page-break { display: none; }}
+@media print {.page-break { display:block; page-break-before: always; }}
+
+table { page-break-inside:avoid; page-break-before:auto }
+body {
+font-family: 'Roboto', sans-serif;
+font-size:12pt;
+text-align:justify;
+margin:auto;
+width:420px;
+line-height:1.5;
+color:A9A9A9;
+}
+#container
+{
+  padding: 8px 8px;
+}
+h2 {
+border-left: 0px solid #c40000;
+border-right: 0px solid #c40000;
+border-top: 0px solid #c40000;
+border-bottom: 1px solid #c40000;
+font-weight: bold;
+font-size: 150%;
+margin-top: 0.0ex;
+margin-bottom: 2ex;
+clear: both;
+color: #4682b4;
+text-align:center;
+letter-spacing: 1pt;
+}
+a:link {color: blue;text-decoration: none;}
+a:visited {color: green; text-decoration: none;}
+a:hover {background-color: green;color: white;}
+</style>
+</head>
+
+<body>
+<div >
+<a href="https://en.wikipedia.org/wiki/Bernhard_Riemann">
+<img alt="Bernhard Riemann Signature" src="BernhardRiemannSignature.jpg" width="420" height="100"></a>
+</div>
+<div id="container">
+
+<h2>On the Number of Primes<br>less than a given Magnitude</h2>
+
+<p>
+The best way to express my gratitude for the honor, which the Academy
+has made me by selecting me among its correspondents, is, as I believe,
+to make immediately use of the privilege I received and communicate
+an investigation about the frequency of the prime numbers. This topic,
+which by the interest which Gauß and Dirichlet have shown in it over
+many years, might not seem entirely unworthy of such a communication.
+</p>
+
+<p>
+The starting point for this investigation is Euler's observation,
+that the product
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\prod\frac1{1-\frac1{p^s}}=\sum\frac1{n^s},
+\end{equation} </p>
+
+<p>
+where $p$ ranges over the prime numbers and $n$ over all integers.
+</p>
+
+<p>
+The function of a complex variable $s$, which is represented by these
+two expressions wherever they converge, I denote by $\zeta(s).$
+
+Both converge only as long as the real part of $s$ is greater than $1;$
+however, one can easily find an expression for the function which is
+always valid. By applying the equation
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\int\limits_0^\infty e^{-nx}x^{s-1}dx
+=\frac{\Gamma(s)}{n^s}
+\end{equation}</p>
+
+<p>
+one finds first
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\Gamma(s)\zeta(s)
+=\int\limits_0^\infty\frac{x^{s-1}dx}{e^x-1}.
+\end{equation}</p>
+
+<p>
+If one now considers the integral
+</p>
+
+<p style="color:maroon">\begin{equation}
+\int\frac{(-x)^{s-1}dx}{e^x-1}
+\end{equation}</p>
+
+<p>
+from $ +\infty$ to $+\infty$ in a positive sense around a domain
+that includes the value 0, but does not contain any other discontinuity
+of the integrand in its interior, then this is easily seen to be equal to
+</p>
+
+<p style="color:maroon">\begin{equation}
+(e^{-\pi si}-e^{\pi si})\int\limits_0^\infty\frac{x^{s-1}dx}{e^x-1},
+\end{equation}</p>
+
+<p>
+provided that in the many-valued function $(-x)^{s-1}=e^{(s-1)\log(-x)}$
+the logarithm of $-x$ has been set as to be real for a negative $x$. Thus
+</p>
+
+<p style="color:maroon">\begin{equation} % {\textstyle\prod}(s-1)
+2\sin\pi s \,\Gamma(s)\zeta(s)
+=i\int\limits_\infty^\infty\frac{(-x)^{s-1}dx}{e^x-1},
+\end{equation}</p>
+
+<p>
+where the integral is understood as defined above.
+</p>
+
+<p>
+This equation gives the value of the function $\zeta(s)$ for all complex
+$s$ and shows that it is single-valued and finite for all values of $s$
+except 1, and also that it vanishes when $s$ is a negative even integer.
+</p>
+
+<p>
+When the real part of $s$ is negative, the integral can be taken, instead
+by positively traversing the boundary of the given domain, by traversing
+the boundary of the complement of that domain in the negative sense, since
+then the integral is infinitely small over values with infinitely
+large modulus.
+</p>
+
+<p>
+In the interior of this complementary domain, however, the integrand
+becomes discontinuous only if $x$ equals an integer multiple of
+$\pm2\pi i$. The integral is therefore equal to the sum of the integrals
+taken around these values in the negative sense. Since the integral
+around the value $n2\pi i$ equals $(-n2\pi i)^{s-1}(-2\pi i)$ this gives
+</p>
+
+<p style="color:maroon"> \begin{equation}
+2\sin\pi s\, % {\textstyle\prod}(s-1)
+\Gamma(s)\zeta(s)=
+(2\pi)^s\sum n^{s-1}\bigl((-i)^{s-1}+i^{s-1}\bigr).
+\end{equation} </p>
+
+<p>
+This relation between $\zeta(s)$ and $\zeta(1-s)$ can also be stated
+using known properties of the function $\Gamma$ as the proposition that
+</p>
+
+<p style="color:maroon"> \begin{equation}  % {\textstyle\prod}( \frac{s}{2} -1 )
+\Gamma( \frac{s}{2} )\,\pi^{-\frac s2}\zeta(s)
+\end{equation} </p>
+
+<p>
+remains unchanged when $s$ is replaced by $1-s$.
+</p>
+
+<p>
+This property of the function motivated me to replace the integral
+$\Gamma(s)$ with the integral $\Gamma(\frac {s}{2})$ in the general
+term of the series $ \sum {\frac {1}{n^{s}}}$, which leads to a very
+convenient expression for the function $\zeta(s).$ In fact one then has
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\frac1{n^s}\, % {\textstyle\prod}(\frac s2-1 )
+\Gamma(\frac s2 )\,\pi^{-\frac s2}
+=\int\limits_0^\infty e^{-nn\pi x}\,x^{\frac s2-1}dx.
+\end{equation} </p>
+
+<p>
+So, if one sets
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\sum_1^\infty e^{-nn\pi x}=\psi(x)
+\end{equation} </p>
+
+<p>
+it follows that
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\Gamma(\frac s2 )\pi^{-\frac s2}\zeta(s)
+=\int\limits_0^\infty\psi(x)x^{\frac s2-1}dx.
+\end{equation} </p>
+
+<p>
+Also, since (Jacobi. Fund. p. 184)
+</p>
+
+<p style="color:maroon"> \begin{equation}
+2\psi(x)+1=x^{-\frac12}\left(2\psi\left(\frac1x\right)+1\right),
+\end{equation} </p>
+
+<p>
+one has
+</p>
+
+<p style="color:maroon"> \begin{multline}
+\Gamma(\frac s2 )\pi^{-\frac s2}\zeta(s)\\
+=\int\limits_1^\infty\psi(x) x^{\frac s2-1}dx
++\int\limits_0^1\psi\left(\frac1x\right)x^{\frac s2-\frac32}dx\qquad\\
+\quad +\frac12\int\limits_0^1\left(x^{\frac s2-\frac32}
+-x^{\frac s2-1}\right)dx\\
+=\frac1{s(s-1)}+\int\limits_1^\infty\psi(x)
+\left(x^{\frac s2-1}+x^{-\frac12-\frac s2}\right)dx.
+\end{multline} </p>
+
+<p>
+I now set $s = \tfrac12+ti$ and
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\Gamma\left(\frac s2 + 1 \right)(s-1)
+\pi^{-\frac s2}\zeta(s)=\xi(t)
+\end{equation} </p>
+
+<p>
+so that
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\xi(t)=\frac12-\left(t^2+\frac14\right)
+\int\limits_1^\infty\psi(x)x^{-\frac34}
+\cos\left(\frac12t\log x\right)dx
+\end{equation} </p>
+
+<p>
+or also
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\xi(t)=4\int\limits_1^\infty\frac{d\left(x^\frac32\psi'(x)\right)}
+{dx}x^{-\frac14}\cos\left(\frac12t\log x\right)dx.
+\end{equation} </p>
+
+<p>
+This function is finite for all finite values of $t$ and can be developed
+into a very rapidly converging series in powers of $t^2.$ Since for values
+of $s$ with real part greater than 1, $\log\zeta(s)=-\sum\log(1-p^{-s})$
+remains finite, and since the same is true for the logarithms of the
+other factors of $\xi(t),$ the function $\xi(t)$ can only vanish if the
+imaginary part of $t$ lies between $\tfrac12i$ and $ -\tfrac12i.$
+</p>
+
+<p>
+The number of roots of $\xi(t)=0$ whose real part lie between 0
+and $T$ is approximately
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\tfrac T{2\pi}\log\tfrac T{2\pi}-\tfrac T{2\pi}.
+\end{equation} </p>
+
+<p>
+This is because the integral $\textstyle\int d\log\xi(t)$ taken in the
+positive sense around the region of all values of $t$ whose imaginary
+parts lie between $\tfrac12i$ and $-\tfrac12i$ and whose real part lie
+between 0 and $T$ is (up to a fraction of the order of magnitude of
+$\tfrac1T$ ) equal to $(T\log\tfrac T{2\pi}-T)i\,;$ on the other hand
+this integral is also equal to the number of roots of $\xi (t) = 0$
+lying within this region, multiplied by $2\pi i.$
+</p>
+
+<p>
+In fact there are about as many real roots within these bounds, and it
+is very probable that all roots are real. Certainly one would wish for
+a strict proof of this; I have, though, after some fleeting futile
+attempts, temporarily put aside the search for such, as it appears
+unnecessary for the next objective of my investigation.
+</p>
+
+<p>
+If $\alpha$ denotes a root of the equation $\xi(\alpha)=0,$ then one
+can express $\log\xi(t)$ as
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\sum\log\left(1-\frac{t^2}{\alpha^2}\right)+\log\xi(0).
+\end{equation} </p>
+
+<p>
+Since the density of the roots of the size $t$ grows only like
+$\log\frac t{2\pi},$ this expression converges and becomes for infinite
+$t$ infinite like $t\log t;$ thus it differs from $\log\xi(t)$ by a
+function of $t^2,$ which remains continuous and finite for finite $t$
+and, when divided by $t^2,$ becomes infinitely small for infinite $t.$
+This difference is therefore a constant whose value can be determined
+by setting $t=0.$
+</p>
+
+<p>
+The number of prime numbers smaller than $x$ can now be determined using
+these facts. Let $\Pi(x)$ when $x$ is not a prime number be equal to
+this number, but when $x$ is a prime number, be greater by $\tfrac12,$
+so that for an $x$ at which the value of $\Pi(x)$ jumps,
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\Pi(x)=\frac{\Pi(x+0)+\Pi(x-0)}2.
+\end{equation} </p>
+
+<p>
+If one now replaces in
+</p>
+
+<p style="color:maroon"> \begin{align}
+\log\zeta(s)&amp;=-\sum\log(1-p^{-s})\\
+&amp;=\sum p^{-s}+\frac12\sum p^{-2s}+\frac13\sum p^{-3s}+\ldots
+\end{align} </p>
+
+<p>
+the terms
+</p>
+
+<p style="color:maroon"> \begin{equation}
+p^{-s}\, \text{ by } s\int_p^\infty x^{-s-1}dx, \quad
+p^{-2s}\, \text{ by } s\int_{p^2}^\infty x^{-s-1}dx, \ldots,
+\end{equation} </p>
+
+<p>
+one obtains
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\frac{\log\zeta(s)}s=\int\limits_1^\infty \Pi(x)\,x^{-s-1}dx
+\end{equation} </p>
+
+<p>
+if one writes $\Pi(x)$ for
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\pi(x)+\frac12\pi(x^\frac12)+\frac13\pi(x^\frac13)+\ldots\,.
+\end{equation}
+</p>
+
+<p>
+This equation is valid for any complex value $a+bi$ of $s$
+for which $a \gt 1.$ But if, in the given range, the equation
+</p>
+
+<p style="color:maroon"> \begin{equation}
+g(s)=\int\limits_0^\infty h(x)x^{-s}d\log x
+\end{equation} </p>
+
+<p>
+holds, then Fourier's theorem allows to express the function $ h$ in
+terms of the function $g$. The equation decomposes if $h(x)$ is real and
+</p>
+
+<p style="color:maroon"> \begin{equation}
+g(a+bi)=g_1(b)+ig_2(b),\,
+\end{equation} </p>
+
+<p>
+into the following two
+</p>
+
+<p style="color:maroon"> \begin{align}
+g_1(b)&amp;=\int\limits_0^\infty h(x)x^{-a}\cos(b\log x)d\log x,\\
+ig_2(b)&amp;=-i\int\limits_0^\infty h(x)x^{-a}\sin(b\log x)d\log x.
+\end{align} </p>
+
+<p>
+If both equations are multiplied by
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\bigl(\cos(b\log y)+i\sin(b\log y)\bigr)\,db
+\end{equation} </p>
+
+<p>
+and integrated from $-\infty$ to $ \infty$, one gets on the right hand
+side of both $\pi h(y)y^{-a},$ by Fourier's theorem. Thus, if one
+adds both equations and multiplies with $iy^a$ one obtains
+</p>
+
+<p style="color:maroon"> \begin{equation}
+2\pi ih(y)=\int\limits_{a-\infty i}^{a+\infty i}g(s)y^sds,
+\end{equation} </p>
+
+<p>
+where the integration has to be carried out such that the real part of
+$s$ remains constant.
+</p>
+
+<p>
+The integral represents, for a value of $y$ at which a jump of the
+function $h(y)$ occurs, the mean of the function values of $h$ on
+either side of the jump. By the way the function $\Pi(x)$ is defined
+it too has this property; therefore one has in full generality
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\Pi(y)=\frac1{2\pi i}\int\limits_{a-\infty i}^{a+\infty i}
+\frac{\log\zeta(s)}sy^sds.
+\end{equation} </p>
+
+<p>
+For $\log\zeta\,$ one can substitute the expression found earlier
+</p>
+
+<p style="color:maroon"> \begin{multline}
+\frac s2\log\pi-\log(s-1) - \log\Gamma\left( \frac s2 + 1 \right)
+\\ +\sum_\alpha\log\left(1+\frac{(s-\frac12)^2}{\alpha^2 }\right)+\log\xi(0).
+\end{multline} </p>
+
+<p>
+But since the integrals of the individual terms of this expression do
+not converge when extended to infinity, it is desirable to first
+transform the equation by integration by parts into
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\Pi(x)=-\frac1{2\pi i}\frac1{\log x}\int
+\limits_{a-\infty i}^{a+\infty i}\frac{d\frac{\log\zeta(s)}s}{ds}x^sds .
+\end{equation} </p>
+
+<p>
+Since, for $m=\infty,$
+</p>
+
+<p style="color:maroon"> \begin{multline}
+-\log\Gamma\left( \frac s2 + 1 \right)\\
+=\lim\left(\sum_{n=1}^{n=m}\log\left(1+\frac s{2n}\right)
+-\frac s2\log m\right),
+\end{multline} </p>
+
+<p>
+and therefore
+</p>
+
+<p style="color:maroon;"> \begin{equation}
+-\frac{d\frac1s \log\Gamma\left( \frac s2 + 1 \right) }{ds}
+=\sum_1^\infty\frac{d\frac1s\log\left(1+\frac s{2n}\right)}{ds},
+\end{equation} </p>
+
+<p>
+all terms of the expression for $\Pi(x)$ with the exception of
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\frac1{2\pi i}\frac1{\log x}\int\limits_{a-\infty i}^{a+\infty i}
+\frac1{s^2}\log\xi(0)x^sds=\log\xi(0)
+\end{equation} </p>
+
+<p>
+take the form
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\pm\frac1{2\pi i}\frac1{\log x}\int\limits_{a-\infty i}^{a+\infty i}
+\frac{d\left(\frac1s\log\left(1-\frac s\beta\right)\right)}{ds}x^sds.
+\end{equation} </p>
+
+<p>
+But now
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\frac{d\left(\frac1s\log\left(1-\frac s\beta\right)\right)}{d\beta}
+=\frac1{(\beta-s)\beta}.
+\end{equation} </p>
+
+<p>
+Also, if the real part of $s$ is greater than the real part of $\beta,$
+then one obtains
+</p>
+
+<p style="color:maroon"> \begin{align}
+\frac1{2\pi i}&amp;\int\limits_{a-\infty i}^{a+\infty i}\frac{x^sds}{(\beta-s)\beta}
+=\frac{x^\beta}\beta\\
+&amp;=\int\limits_\infty^x x^{\beta-1}dx\;\, \text{ or }
+\,=\int\limits_0^x x^{\beta-1}dx.
+\end{align} </p>
+
+<p>
+depending on the real part of $\beta$ being negative or positive. As a result
+</p>
+
+<p style="color:maroon"> \begin{align}
+\frac1{2\pi i}&amp;\frac1{\log x}\int\limits_{a-\infty i}^{a+\infty i}
+\frac{d\left(\frac1s\log\left(1-\frac s\beta\right)\right)}{ds}x^sds\\
+&amp;= -\frac1{2\pi i}\int\limits_{a-\infty i}^{a+\infty i}\frac1s\log\left(1-\frac s\beta\right)x^sds\\
+&amp;= \int\limits_\infty^x\frac{x^{\beta-1}}{\log x}dx+c.\ \text{ or } \
+=\int\limits_0^x\frac{x^{\beta-1}}{\log x}dx+c.
+\end{align} </p>
+
+<p>
+In the first case the constant of integration can be determined by
+letting the real part of $\beta$ approach negative infinite.
+</p>
+
+<p>
+In the second case the integral from $0$ to $x$ takes two values which
+differ by $2\pi i$, depending on whether the path of integration is
+taken through the complex values with positive or negative argument.
+If the path is in the upper halfplane the integral becomes infinitely
+small when the coefficient of $i$ in $\beta$ becomes infinite positive;
+but if the path is in the lower halfplane the integral becomes infinitely
+small when this coefficient becomes infinite negative.
+</p>
+
+<p>
+This shows how on the left hand side $\log(1- s/\beta)$ has to be
+determined in order that the constant of integration vanish.
+</p>
+
+<p>
+Inserting these values in the expression for $\Pi(x)$ gives
+</p>
+
+<p style="color:maroon"> \begin{align}
+\Pi(x)=Li(x)&amp;-\sum_\alpha \left(Li\left(x^{\frac12+\alpha i}\right)
++Li\left(x^{\frac12-\alpha i}\right)\right)\\
+&amp;+\int\limits_x^\infty\frac1{x^2-1}\frac{dx}{x\log x}-\log 2,
+\end{align} </p>
+
+<p>
+where in $\sum_\alpha$ for $\alpha$ all positive roots (or all roots
+with positive real part) of the equation $\xi(\alpha)=0$ are taken,
+ordered by size. It can easily be shown, by means of a more detailed
+discussion of the function $\xi,$ that with this ordering the sum of
+the series
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\sum_\alpha\left(Li\left(x^{\frac12+\alpha i}\right)
++Li\left(x^{\frac12-\alpha i}\right)\right)\log x
+\end{equation} </p>
+
+<p>
+is the same as the limit of
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\frac1{2\pi i}\int\limits_{a-bi}^{a+bi}\frac{d\frac1s\sum\log\left(1
++\frac{\left(s-\frac12\right)^2}{\alpha^2}\right)}{ds}x^sds
+\end{equation} </p>
+
+<p>
+to which $b$ converges if it grows unlimited; however by changing the
+order it can approach any arbitrary real value.
+</p>
+
+<p>
+From $\Pi(x)$ one can find $\pi(x)$ by inverting
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\Pi(x)=\sum\frac1n\pi\left(x^\frac1n\right)\,.
+\end{equation} </p>
+
+<p>
+The resulting equation is
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\pi(x)=\sum(-1)^\mu\frac1m\Pi\left(x^\frac1m\right),
+\end{equation} </p>
+
+<p>
+in which $m$ ranges over all positive integers which are not divisible by
+any square except 1 and $\mu$ denotes the number of prime factors of $m$.
+</p>
+
+<p>
+If one limits $\sum_\alpha$ to a finite number of terms, then the
+derivative of the expression for $\Pi(x)$ or, except for a part that
+decreases very rapidly with increasing $x$,
+</p>
+
+<p style="color:maroon"> \begin{equation}
+\frac1{\log x}-2\sum^\alpha\frac{\cos(\alpha\log x)x^{-\frac12}}{\log x}
+\end{equation} </p>
+
+<p>
+gives an approximate expression for the density of the prime numbers,
+plus $1/2$ of the density of the prime number squares, plus $1/3$ of the
+density of the prime number cubes, plus $\ldots$ ect., of the size $x$.
+</p>
+
+<p>
+The known approximation $\pi(x)=Li(x)$ is therefore valid only up to
+an order of magnitude of $x^{1/2}$ and gives a somewhat too large value,
+because the non-periodic terms in the expression of $\pi(x)$ are, apart
+from terms which remain bounded as $x$ increases,
+</p>
+
+<p style="color:maroon"> \begin{multline}
+Li(x)-\frac12Li\left(x^\frac12\right)-\frac13 Li\left(x^\frac13\right)-
+\frac15Li\left(x^\frac15\right)\\
++\frac16Li\left(x^\frac16\right)-\frac17 Li\left(x^\frac17\right)+\ldots\,.
+\end{multline} </p>
+
+<p>
+Indeed, in the comparison made by Gauß and Goldschmidt for $x$ up to
+three million of $Li(x)$ with the number of prime numbers less than $x$
+this number has always been less than $Li(x),$ beginning with the first
+hundred thousand; in fact the difference is gradually increasing, with
+many fluctuations.
+</p>
+
+<p>
+But also the local increase and decrease in the density of the prime
+numbers, which is represented by the periodic terms in the formula,
+was already observed in the counting, although no law for it could
+be established.
+</p>
+
+<p>In the event of a new count, it would be interesting to examine
+the effect of the individual periodic terms contained in the formula
+for the density of the prime numbers. The function $\Pi(x)$ would show
+a more regular behaviour than $\pi(x)$, which already in the first
+hundred is on average very nearly equal to $Li(x)+\log\xi(0)$.
+</p>
+
+<hr style="margin-top:20px">
+<p style="font-style:italic;color:cornflowerblue;font-size:smaller">
+Please improve the translation on
+<a href="https://github.com/PeterLuschny">github</a>.</p>
+
+</body></html>
