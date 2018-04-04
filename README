@@ -7,8 +7,7 @@ This project has a twofold objective:
     on a mobile device.
 
 The decisive factor for (A) was that apparently no translation exists
-that has a free license (the Riemann's text itself is free of third
-party rights).
+that has a free license (the Riemann's text itself is free).
 
 For (B) we have as target reader in mind a student who on the way to the
 university in the subway is reading the text on his mobile phone or tablet.
@@ -18,7 +17,7 @@ To this end, we set the following goals:
 (0) The translation is released worldwide into the public domain.
     (CC zero license).
 
-(1) The translation aims to be to in today's colloquial English and does
+(1) The translation aims to be in today's colloquial English and does
     not attempt to reconstruct the nested sentences of the academic
     language of the 19th century Riemann uses. Readability is sought,
     not a philological transcription.
@@ -51,7 +50,7 @@ To this end, we set the following goals:
    on the Riemann Hypothesis".
 
 (5) The text format is Html and LaTex/MathJax. This is supposed to
-    be as slender as possible and be easy to read on small devices
+    be as slender as possible and to be easy to read on small devices
     like smartphones and tablets.
 
 (6) If you discover errors or have suggestions for improvement
