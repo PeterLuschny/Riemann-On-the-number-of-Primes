@@ -31,3 +31,5 @@ It is very easy to convert the html file into a LaTeX file:
 
 (4) Save the file and compile. This should result in a pdf-file
     assuming you have a working TeX environment. 
+
+Here you can see a [preview](http://luschny.de/math/zeta/OnTheNumberOfPrimesLessThanAGivenMagnitude.pdf).
