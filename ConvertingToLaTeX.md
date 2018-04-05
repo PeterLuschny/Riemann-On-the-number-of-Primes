@@ -1,4 +1,3 @@
-
 It is very easy to convert the html file into a LaTeX file:
 
 (1) Save a copy of the Html file and change the file-suffix to ".tex".
@@ -17,7 +16,10 @@ It is very easy to convert the html file into a LaTeX file:
 (3) Insert the next lines at the beginning of the file:
 
     \documentclass[a4paper,12pt]{article}
-    \usepackage[a4paper, left=5cm, textwidth=10cm]{geometry}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{babel}
+    \usepackage[a4paper, left=5.5cm, textwidth=10cm]{geometry}
     \RequirePackage{amsmath}
     \RequirePackage[pdftex]{hyperref}
     \title{On the Number of Primes less than a given Magnitude}
@@ -29,7 +31,13 @@ It is very easy to convert the html file into a LaTeX file:
         \end{document}
     at the end of the file.
 
-(4) Save the file and compile. This should result in a pdf-file
-    assuming you have a working TeX environment. 
+    For the French version replace the first line by
+        \documentclass[french,a4paper,12pt]{article}
+    and the title line by
+        \title{Sur le nombre de nombres premiers inférieurs à une taille donnée}
 
-Here you can see a [preview](http://luschny.de/math/zeta/OnTheNumberOfPrimesLessThanAGivenMagnitude.pdf).
+(4) Save the file and compile. This should result in a pdf-file
+    assuming you have a working TeX environment.
+
+Here you can see a preview of the [Englich version](http://luschny.de/math/zeta/OnTheNumberOfPrimesLessThanAGivenMagnitude.pdf)
+and of the [French version](http://luschny.de/math/zeta/SurLeNombresPremiers.pdf).

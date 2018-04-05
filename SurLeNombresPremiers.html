@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html><head>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<meta name='viewport' content='width=device-width'>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="fr">
+<meta name="date" content="2018-03-26">
+<meta name='author' content='Peter Luschny'>
+<meta name='description' content='Bernhard Riemann Zeta Function.'>
+<meta name='keywords' content='Bernhard Riemann, mathematics, number of primes, zeta function'>
+
+<title>Sur le nombre de nombres premiers</title>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    "HTML-CSS": {
+     availableFonts: [],
+     preferredFont: null,
+     webFont: "Neo-Euler",
+     scale: 90
+    },
+    tex2jax: {inlineMath: [["$","$"]],
+    displayMath: [['\\[','\\]']]}
+});
+</script>
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<style type="text/css">
+
+@media all   {.page-break { display: none; }}
+@media print {.page-break { display:block; page-break-before: always; }}
+
+body {
+font-family: 'Roboto', sans-serif;
+font-size:12pt;
+text-align:justify;
+margin:auto;
+width:420px;
+line-height:1.5;
+color:A9A9A9;
+}
+#container
+{
+  padding: 8px 8px;
+}
+h2 {
+border-left: 0px solid #c40000;
+border-right: 0px solid #c40000;
+border-top: 0px solid #c40000;
+border-bottom: 1px solid #c40000;
+font-weight: bold;
+font-size: 150%;
+margin-top: 0.0ex;
+margin-bottom: 2ex;
+clear: both;
+color: #4682b4;
+text-align:center;
+letter-spacing: 1pt;
+}
+a:link {color: blue;text-decoration: none;}
+a:visited {color: green; text-decoration: none;}
+a:hover {background-color: green;color: white;}
+</style>
+</head>
+<body>
+<div >
+<a href="https://fr.wikipedia.org/wiki/Bernhard_Riemann">
+<img alt="Bernhard Riemann Signature" src="BernhardRiemannSignature.jpg" width="420" height="100"></a>
+</div>
+<div id="container">
+
+<h2>Sur le nombre de nombres premiers inférieurs à une taille donnée</h2>
+<p>
+Je ne crois pouvoir mieux exprimer mes remerciements à l'Académie pour
+la distinction à laquelle elle m’a fait participer en m’admettant au
+nombre de ses Correspondants qu’en faisant immédiatement usage du
+privilège attaché à ce titre pour lui communiquer une étude sur la
+fréquence des nombres premiers. C’est un sujet qui, par l’intérêt que
+Gauss et Dirichlet lui ont voué pendant de longues années, ne me semble
+peut-être pas indigne de faire l’objet d’une telle Communication.
+</p>
+<p>
+Je prendrai pour point de départ dans cette étude la remarque faite par
+Euler que le produit
+</p>
+<p style="color:maroon">\begin{equation}
+\prod\frac1{1-\frac1{p^s}}=\sum\frac1{n^s},
+\end{equation}</p>
+<p>
+lorsque $p$ prend pour valeur tous les nombres premiers et $n$ tous
+les nombres entiers.
+</p>
+<p>
+La fonction de la variable complexe $s$, qui sera représentée par ces
+deux expressions, tant qu’elles convergent, je la désignerai par $\zeta(s).$
+
+Toutes deux convergent qu’autant que la partie réelle de $s$ est
+supérieure à $1.$ Néanmoins il est facile de trouver pour la fonction
+une expression qui reste toujours valable. En faisant usage de l’équation
+</p>
+<p style="color:maroon">\begin{equation}
+\int\limits_0^\infty e^{-nx}x^{s-1}dx
+=\frac{\Gamma(s)}{n^s}
+\end{equation}</p>
+<p>
+on obtient d’abord
+</p>
+<p style="color:maroon">\begin{equation}
+\Gamma(s)\zeta(s)
+=\int\limits_0^\infty\frac{x^{s-1}dx}{e^x-1}.
+\end{equation}</p>
+<p>
+Si maintenant l’on considère l’intégrale
+</p>
+<p style="color:maroon">\begin{equation}
+\int\frac{(-x)^{s-1}dx}{e^x-1}
+\end{equation}</p>
+<p>
+prise dans le sens positif de $+\infty$ à $+\infty$ et autour d’un
+domaine de grandeurs qui contient à son intérieur la valeur 0 mais qui
+ne contient aucune autre valeur de discontinuité de la fonction sous le
+signe d’intégration, on obtient aisément pour la valeur de cette intégrale
+</p>
+<p style="color:maroon">\begin{equation}
+(e^{-\pi si}-e^{\pi si})\int\limits_0^\infty\frac{x^{s-1}dx}{e^x-1},
+\end{equation}</p>
+<p>
+en faisant l’hypothèse que dans la fonction multiforme
+$(-x)^{s-1}=e^{(s-1)\log(-x)}$ le logarithme de $-x$ est déterminé
+de telle sorte qu’il soit réel pour $x$ négatif. On aura donc
+</p>
+<p style="color:maroon">\begin{equation}
+2\sin\pi s \,\Gamma(s)\zeta(s)
+=i\int\limits_\infty^\infty\frac{(-x)^{s-1}dx}{e^x-1},
+\end{equation}</p>
+<p>
+l’intégrale étant définie de la manière indiquée ci-dessus.
+</p>
+<p>
+Cette équation donne maintenant la valeur de la fonction $\zeta(s)$ pour
+chaque valeur complexe de $s$ et nous enseigne que cette fonction est
+uniforme, qu’elle est finie pour toutes les valeurs finies de $s$, sauf 1,
+et aussi qu’elle s’évanouit lorsque $s$ est égal à un entier pair négatif.
+</p>
+<p>
+Lorsque la partie réelle de $s$ est négative, l’intégrale, au lieu d’être
+prise dans le sens positif autour du domaine de grandeurs assigné, peut
+être prise dans le sens négatif autour du domaine de grandeurs qui
+contient toutes les grandeurs complexes restantes, car l’intégrale, pour
+des valeurs dont le module est infiniment grand est alors infiniment petite.
+</p>
+<p>
+Mais, à l’intérieur de ce domaine, la fonction sous le signe d’intégration
+ne devient discontinue que lorsque $x$ est égal à un multiple entier de
+$\pm2\pi i$ et l’intégrale, par conséquent, est égale à la somme des
+intégrales prises dans le sens négatif autour de ces valeurs. Mais
+l’intégrale relative à la valeur $n2\pi i$ égale $(-n2\pi i)^{s-1}(-2\pi i)$;
+on obtient donc
+</p>
+<p style="color:maroon">\begin{equation}
+2\sin\pi s\, \Gamma(s)\zeta(s)
+= (2\pi)^s\sum n^{s-1}\bigl((-i)^{s-1}+i^{s-1}\bigr).
+\end{equation}</p>
+<p>
+C’est-à-dire une relation entre $\zeta(s)$ et $\zeta(1-s)$ qui, en vertu
+de propriétés connues de la fonction $\Gamma$ peut aussi s’exprimer ainsi :
+la quantité
+</p>
+<p style="color:maroon">\begin{equation}
+\Gamma( \frac{s}{2} )\,\pi^{-\frac s2}\zeta(s)
+\end{equation}</p>
+<p>
+reste inaltérée lorsque $s$ est remplacé par $1-s$.
+</p>
+<p>
+Cette propriété de la fonction m’a engagé à introduire, au lieu de
+l’intégrale $\Gamma(s)$, l’intégrale $\Gamma(\frac {s}{2})$ dans le
+terme général de la série $\sum {\frac {1}{n^{s}}}$, ce qui fournit une
+expression très commode de la fonction $\zeta(s).$ On a en effet
+</p>
+<p style="color:maroon">\begin{equation}
+\frac1{n^s}\, \Gamma(\frac s2 )\,\pi^{-\frac s2}
+=\int\limits_0^\infty e^{-nn\pi x}\,x^{\frac s2-1}dx.
+\end{equation}</p>
+<p>
+Par conséquent, si l’on pose
+</p>
+<p style="color:maroon">\begin{equation}
+\sum_1^\infty e^{-nn\pi x}=\psi(x)
+\end{equation}</p>
+<p>
+on a
+</p>
+<p style="color:maroon">\begin{equation}
+\Gamma(\frac s2 )\pi^{-\frac s2}\zeta(s)
+=\int\limits_0^\infty\psi(x)x^{\frac s2-1}dx.
+\end{equation}</p>
+<p>
+Ou bien, puisque (Jacobi. Fund. p. 184)
+</p>
+<p style="color:maroon">\begin{equation}
+2\psi(x)+1=x^{-\frac12}\left(2\psi\left(\frac1x\right)+1\right),
+\end{equation}</p>
+<p>
+on a encore
+</p>
+<p style="color:maroon">\begin{multline}
+\Gamma(\frac s2 )\pi^{-\frac s2}\zeta(s)\\
+=\int\limits_1^\infty\psi(x) x^{\frac s2-1}dx
++\int\limits_0^1\psi\left(\frac1x\right)x^{\frac s2-\frac32}dx\qquad\\
+\quad +\frac12\int\limits_0^1\left(x^{\frac s2-\frac32}
+-x^{\frac s2-1}\right)dx\\
+=\frac1{s(s-1)}+\int\limits_1^\infty\psi(x)
+\left(x^{\frac s2-1}+x^{-\frac12-\frac s2}\right)dx.
+\end{multline} </p>
+<p>
+Je pose maintenant $s = \tfrac12+ti$ et
+</p>
+<p style="color:maroon">\begin{equation}
+\Gamma\left(\frac s2 + 1 \right)(s-1)
+\pi^{-\frac s2}\zeta(s)=\xi(t)
+\end{equation}</p>
+<p>
+en sorte que
+</p>
+<p style="color:maroon">\begin{equation}
+\xi(t)=\frac12-\left(t^2+\frac14\right)
+\int\limits_1^\infty\psi(x)x^{-\frac34}
+\cos\left(\frac12t\log x\right)dx
+\end{equation}</p>
+<p>
+ou encore
+</p>
+<p style="color:maroon">\begin{equation}
+\xi(t)=4\int\limits_1^\infty\frac{d\left(x^\frac32\psi'(x)\right)}
+{dx}x^{-\frac14}\cos\left(\frac12t\log x\right)dx.
+\end{equation}</p>
+<p>
+Cette fonction est finie pour toutes les valeurs finies de $t$ et peut
+être développée suivant les puissances de $t^2$ en une série qui converge
+très rapidement. Puisque, pour une valeur de $s$ dont la partie réelle
+est plus grande que 1, $\log\zeta(s)=-\sum\log(1-p^{-s})$ reste fini et
+que ce même fait a lieu pour les logarithmes des facteurs restants de
+$\xi(t),$ la fonction $\xi(t)$ peut seulement s’évanouir lorsque la partie
+imaginaire de $t$ se trouve comprise entre $\tfrac12i$ et $ -\tfrac12i.$
+</p>
+<p>
+Le nombre de racines de $\xi(t)=0$ dont les parties réelles sont comprises
+entre 0 et $T$ est environ égal à
+</p>
+<p style="color:maroon">\begin{equation}
+\tfrac T{2\pi}\log\tfrac T{2\pi}-\tfrac T{2\pi}
+\end{equation}</p>
+<p>
+car l’intégrale  $\textstyle\int d\log\xi(t)$ prise le long d’un contour
+décrit dans le sens positif, comprenant à son intérieur l’ensemble des
+valeurs de $t$ dont les parties imaginaires sont comprises entre
+$\tfrac12i$ et $-\tfrac12i$ et les parties réelles entre 0 et $T$ est
+égale (abstraction faite d’une partie fractionnaire de même ordre de
+grandeur que la grandeur $\tfrac1T$ ) à $(T\log\tfrac T{2\pi}-T)i\,;$
+or cette intégrale est égale au nombre de racines de $\xi (t) = 0$
+situées dans ce domaine, multiplié par $2\pi i.$
+</p>
+<p>
+On trouve, en effet, entre ces limites un nombre environ égal à celui-ci,
+de racines réelles, et il est très probable que toutes les racines sont
+réelles. Il serait à désirer, sans doute, que l’on eût une démonstration
+rigoureuse de cette proposition ; néanmoins j’ai laissé cette recherche
+de côté pour le moment après quelques rapides essais infructueux, car
+elle paraît superflue pour le but immédiat de mon étude.
+</p>
+<p>
+Si l’on désigne par $\alpha$  toute racine de l’équation $\xi(\alpha)=0\,,$
+on peut exprimer $\log\xi(t)$ par
+</p>
+<p style="color:maroon">\begin{equation}
+\sum\log\left(1-\frac{t^2}{\alpha^2}\right)+\log\xi(0).
+\end{equation}</p>
+<p>
+En effet, puisque la densité des racines de grandeur $t$ augmente
+seulement avec $t$ comme le fait $\log\frac t{2\pi},$ cette expression
+converge et pour $t$ infini ne devient infinie que comme l’est $t\log t\,;$
+elle diffère de $\log\xi(t)$ par conséquent d’une fonction de $t^2$ qui,
+pour $t$ fini, reste finie et continue et qui, divisée par $t^2,$ sera
+infiniment petite pour $t$ infini.
+
+Cette différence, par suite, est une constante dont la valeur peut être
+déterminée en posant $t=0.$
+</p>
+<p>
+À l’aide de ces principes auxiliaires, nous pouvons maintenant déterminer
+le nombre des nombres premiers qui sont inférieurs à $x$. Soit $\Pi(x)$
+ce nombre lorsque $x$ n’est pas exactement égal à un nombre premier, et
+soit $\Pi(x)$ ce nombre augmenté de $\tfrac12$ lorsque $x$ est premier,
+de telle sorte que, pour une valeur de $x$, pour laquelle $\Pi(x)$ varie
+par un saut brusque, on ait,
+</p>
+<p style="color:maroon">\begin{equation}
+\Pi(x)=\frac{\Pi(x+0)+\Pi(x-0)}2.
+\end{equation}</p>
+<p>
+Si, maintenant, dans l’expression
+</p>
+<p style="color:maroon">\begin{align}
+\log\zeta(s)&amp;=-\sum\log(1-p^{-s})\\
+&amp;=\sum p^{-s}+\frac12\sum p^{-2s}+\frac13\sum p^{-3s}+\ldots
+\end{align} </p>
+<p>
+on remplace
+</p>
+<p style="color:maroon">\begin{equation}
+p^{-s}\, \text{ par } s\int_p^\infty x^{-s-1}dx, \
+p^{-2s}\, \text{ par } s\int_{p^2}^\infty x^{-s-1}dx,\ \ldots,
+\end{equation}</p>
+<p>
+on obtient
+</p>
+<p style="color:maroon">\begin{equation}
+\frac{\log\zeta(s)}s=\int\limits_1^\infty \Pi(x)\,x^{-s-1}dx
+\end{equation}</p>
+<p>
+où l’on a désigné par $\Pi(x)$ l’expression
+</p>
+<p style="color:maroon">\begin{equation}
+\pi(x)+\frac12\pi(x^\frac12)+\frac13\pi(x^\frac13)+\ldots\,.
+\end{equation}
+</p>
+<p>
+Cette équation a lieu pour toute valeur complexe $a+bi$ de $s$, pourvu
+que $a \gt 1.$ Mais lorsque, sous ces hypothèses, l’équation suivante
+</p>
+<p style="color:maroon">\begin{equation}
+g(s)=\int\limits_0^\infty h(x)x^{-s}d\log x
+\end{equation}</p>
+<p>
+a lieu, l’on peut, à l’aide du théorème de Fourier, exprimer la fonction
+$h$ par la fonction $g$. Cette équation, quand $h(x)$ est réel et que
+</p>
+<p style="color:maroon">\begin{equation}
+g(a+bi)=g_1(b)+ig_2(b),\,
+\end{equation}</p>
+<p>
+se décompose en les deux suivantes :
+</p>
+<p style="color:maroon">\begin{align}
+g_1(b)&amp;=\int\limits_0^\infty h(x)x^{-a}\cos(b\log x)d\log x,\\
+ig_2(b)&amp;=-i\int\limits_0^\infty h(x)x^{-a}\sin(b\log x)d\log x.
+\end{align}</p>
+<p>
+Lorsque l’on multiplie les deux équations par
+</p>
+<p style="color:maroon">\begin{equation}
+\bigl(\cos(b\log y)+i\sin(b\log y)\bigr)\,db
+\end{equation}</p>
+<p>
+et que l’on intègre de $-\infty$ à $\infty$, l’on obtient, en vertu du
+théorème de Fourier, dans les seconds membres des deux équations
+$\pi h(y)y^{-a},$ et, par conséquent, en ajoutant les deux équations
+et multipliant par $iy^a,$ on a
+</p>
+<p style="color:maroon">\begin{equation}
+2\pi ih(y)=\int\limits_{a-\infty i}^{a+\infty i}g(s)y^sds,
+\end{equation}</p>
+<p>
+où l’intégration doit être prise de telle sorte que la partie réelle de
+$s$ reste constante.
+</p>
+<p>
+Cette intégrale représente, pour une valeur de $y$ pour laquelle a lieu
+une variation par saut brusque de la fonction, la valeur moyenne des
+valeurs de la fonction $h(y)$ de chaque côté du saut. Avec les modes
+de détermination exposés ci-dessus, la fonction $\Pi(x)$ possède cette
+même propriété, et l’on a donc, d’une manière générale,
+</p>
+<p style="color:maroon">\begin{equation}
+\Pi(y)=\frac1{2\pi i}\int\limits_{a-\infty i}^{a+\infty i}
+\frac{\log\zeta(s)}sy^sds.
+\end{equation}</p>
+<p>
+On peut maintenant substituer à $\log\zeta$, l’expression trouvée
+précédemment
+</p>
+<p style="color:maroon">\begin{multline}
+\frac s2\log\pi-\log(s-1) - \log\Gamma\left( \frac s2 + 1 \right)
+\\ +\sum_\alpha\log\left(1+\frac{(s-\frac12)^2}{\alpha^2 }\right)+\log\xi(0).
+\end{multline} </p>
+<p>
+Mais les intégrales de chaque terme de cette expression, prises jusqu’à
+l’infini, ne convergent pas ; il sera donc convenable de transformer
+l’équation précédente à l’aide d’une intégration par parties en
+</p>
+<p style="color:maroon">\begin{equation}
+\Pi(x)=-\frac1{2\pi i}\frac1{\log x}\int
+\limits_{a-\infty i}^{a+\infty i}\frac{d\frac{\log\zeta(s)}s}{ds}x^sds .
+\end{equation}</p>
+<p>
+Comme, pour $m=\infty,$
+</p>
+<p style="color:maroon">\begin{multline}
+-\log\Gamma\left( \frac s2 + 1 \right)\\
+=\lim\left(\sum_{n=1}^{n=m}\log\left(1+\frac s{2n}\right)
+-\frac s2\log m\right),
+\end{multline}</p>
+<p>
+et que, par suite
+</p>
+<p style="color:maroon">\begin{equation}
+-\frac{d\frac1s \log\Gamma\left( \frac s2 + 1 \right) }{ds}
+=\sum_1^\infty\frac{d\frac1s\log\left(1+\frac s{2n}\right)}{ds},
+\end{equation}</p>
+<p>
+tous les termes de l’expression de $\Pi(x)$, à l’exception de
+</p>
+<p style="color:maroon">\begin{equation}
+\frac1{2\pi i}\frac1{\log x}\int\limits_{a-\infty i}^{a+\infty i}
+\frac1{s^2}\log\xi(0)x^sds=\log\xi(0)
+\end{equation}</p>
+<p>
+prennent alors la forme
+</p>
+<p style="color:maroon">\begin{equation}
+\pm\frac1{2\pi i}\frac1{\log x}\int\limits_{a-\infty i}^{a+\infty i}
+\frac{d\left(\frac1s\log\left(1-\frac s\beta\right)\right)}{ds}x^sds.
+\end{equation}</p>
+<p>
+Mais on a maintenant
+</p>
+<p style="color:maroon">\begin{equation}
+\frac{d\left(\frac1s\log\left(1-\frac s\beta\right)\right)}{d\beta}
+=\frac1{(\beta-s)\beta}.
+\end{equation}</p>
+<p>
+et, lorsque la partie réelle de $s$ est plus grande que la partie réelle
+de $\beta,$
+</p>
+<p style="color:maroon">\begin{align}
+\frac1{2\pi i}&amp;\int\limits_{a-\infty i}^{a+\infty i}\frac{x^sds}{(\beta-s)\beta}
+=\frac{x^\beta}\beta\\
+&amp;=\int\limits_\infty^x x^{\beta-1}dx\;\, \text{ ou }
+\,=\int\limits_0^x x^{\beta-1}dx.
+\end{align}</p>
+<p>
+selon que la partie réelle de $\beta$ est négative ou positive. On a donc
+</p>
+<p style="color:maroon"> \begin{align}
+\frac1{2\pi i}&amp;\frac1{\log x}\int\limits_{a-\infty i}^{a+\infty i}
+\frac{d\left(\frac1s\log\left(1-\frac s\beta\right)\right)}{ds}x^sds\\
+&amp;= -\frac1{2\pi i}\int\limits_{a-\infty i}^{a+\infty i}\frac1s\log\left(1-\frac s\beta\right)x^sds\\
+&amp;= \int\limits_\infty^x\frac{x^{\beta-1}}{\log x}dx+c.\ \text{ ou }
+\ =\int\limits_0^x\frac{x^{\beta-1}}{\log x}dx+c.
+\end{align}</p>
+<p>
+Dans le premier cas, la constante d’intégration peut être déterminée
+en faisant tendre la partie réelle de $\beta$ vers l’infini négatif.
+</p>
+<p>
+Dans le second cas, l’intégrale de $0$ à $x$ prend des valeurs qui
+diffèrent de $2\pi i$, lorsque l’intégrale relative à des valeurs
+complexes est prise dans le sens positif ou dans le sens négatif, et
+elle sera, prise dans ce dernier sens, infiniment petite lorsque le
+coefficient de $i$ dans la valeur de $\beta$  est égal à l’infiniment
+grand positif ; mais ce fait aura lieu, dans le premier cas, lorsque
+le coefficient est égal à l’infiniment grand négatif.
+</p>
+<p>
+Ceci nous enseigne comment $\log(1- s/\beta)$ doit être déterminé dans
+le premier membre de manière à faire disparaître la constante d’intégration.
+</p>
+<p>
+En portant ces valeurs dans l’expression de $\Pi(x)$ on obtient
+</p>
+<p style="color:maroon">\begin{align}
+\Pi(x)=Li(x)&amp;-\sum_\alpha \left(Li\left(x^{\frac12+\alpha i}\right)
++Li\left(x^{\frac12-\alpha i}\right)\right)\\
+&amp;+\int\limits_x^\infty\frac1{x^2-1}\frac{dx}{x\log x}-\log 2,
+\end{align}</p>
+<p>
+où, dans la série $\sum_\alpha$ on donnera à $\alpha$ pour valeurs toutes
+les racines positives (ou à parties réelles positives) de l’équation
+$\xi(\alpha)=0$ en les rangeant par ordre de grandeur. On peut alors,
+après une discussion plus approfondie de la fonction $\xi,$ démontrer
+aisément que lorsque les termes sont rangés, comme il est prescrit
+ci-dessus, dans la série
+</p>
+<p style="color:maroon">\begin{equation}
+\sum_\alpha\left(Li\left(x^{\frac12+\alpha i}\right)
++Li\left(x^{\frac12-\alpha i}\right)\right)\log x
+\end{equation}</p>
+<p>
+celle-ci converge vers la même limite que l’expression
+</p>
+<p style="color:maroon">\begin{equation}
+\frac1{2\pi i}\int\limits_{a-bi}^{a+bi}\frac{d\frac1s\sum\log\left(1
++\frac{\left(s-\frac12\right)^2}{\alpha^2}\right)}{ds}x^sds
+\end{equation}</p>
+<p>
+lorsque la grandeur $b$ croît sans limites. Mais, si l’on changeait
+cet ordre des termes de la série, on pourrait obtenir pour résultat
+n’importe quelle valeur réelle.
+</p>
+<p>
+À l’aide de $\Pi(x)$ l’on obtient $\pi(x)$ par inversion de la relation
+</p>
+<p style="color:maroon">\begin{equation}
+\Pi(x)=\sum\frac1n\pi\left(x^\frac1n\right)\,,
+\end{equation}</p>
+<p>
+ce qui donne l’équation
+</p>
+<p style="color:maroon">\begin{equation}
+\pi(x)=\sum(-1)^\mu\frac1m\Pi\left(x^\frac1m\right),
+\end{equation}</p>
+<p>
+où $m$ doit être remplacé successivement par tous les nombres qui ne
+sont divisibles par aucun carré excepté 1 et où $\mu$ désigne le nombre
+des facteurs premiers de $m$.
+</p>
+<p>
+Si on limite $\sum_\alpha$ à un nombre fini de termes, la dérivée de
+l’expression $\Pi(x)$ c’est-à-dire, abstraction faite d’une partie qui
+décroît très rapidement lorsque $x$ croît,
+</p>
+<p style="color:maroon">\begin{equation}
+\frac1{\log x}-2\sum^\alpha\frac{\cos(\alpha\log x)x^{-\frac12}}{\log x}
+\end{equation}</p>
+<p>
+fournit une expression approchée pour la densité des entiers premiers
+$+$ la moitié de la densité des carrés, $+$ le tiers de celle des cubes,
+$+\ \ldots$ des entiers premiers inférieurs à $x$.
+</p>
+<p>
+La formule approchée connue $\pi(x)=Li(x)$ n’est, par conséquent, exacte
+qu’aux grandeurs près de l’ordre de $x^{1/2}$ et fournit une valeur un
+peu trop grande ; car les termes non périodiques dans l’expression de
+$\pi(x)$ sont, abstraction faite de grandeurs qui ne croissent pas
+indéfiniment avec $x,$
+</p>
+<p style="color:maroon">\begin{multline}
+Li(x)-\frac12Li\left(x^\frac12\right)-\frac13 Li\left(x^\frac13\right)-
+\frac15Li\left(x^\frac15\right)\\
++\frac16Li\left(x^\frac16\right)-\frac17 Li\left(x^\frac17\right)+\ldots\,.
+\end{multline}</p>
+<p>
+Du reste, la comparaison, entreprise par Gauss et Goldschmidt, de
+$Li(x)$ avec le nombre de nombres premiers inférieurs à $x$ et poursuivie
+jusqu’à trois millions a révélé que ce nombre, à partir de la première
+centaine de mille, est toujours inférieur à $Li(x)$ et que la différence
+des valeurs, soumises à maintes oscillations, croît néanmoins toujours
+avec $x$.
+</p>
+<p>
+Mais la fréquence et la réunion plus dense par endroits des nombres
+premiers, si l’on peut s’exprimer ainsi, sous l’influence des termes
+périodiques, avaient déjà attiré l’attention, lors du dénombrement des
+nombres premiers, sans que l’on eût aperçu la possibilité d’établir
+une loi à ce sujet.
+</p>
+<p>
+Il serait intéressant dans un nouveau dénombrement, d’étudier l’influence
+de chaque terme périodique contenu dans l’expression donnée pour la
+totalité des nombres premiers. Une marche plus régulière que celle
+donnée par $\Pi(x)$ serait obtenue à l’aide de la fonction $\pi(x)$
+qui, cela se reconnaît déjà très évidemment dans la première centaine,
+coïncide en moyenne avec $Li(x)+\log\xi(0)$.
+</p>
+<hr style="margin-top:20px">
+<p style="font-style:italic;color:cornflowerblue;font-size:smaller">
+Traduction d'après Laugel. 
+<a href="http://luschny.de/math/zeta/OnTheNumberOfPrimesLessThanAGivenMagnitude.html">
+Version anglaise.</a> Sources sur
+<a href="https://github.com/PeterLuschny/Riemann-On-the-number-of-Primes/">
+github</a>.</p>
+</body></html>
