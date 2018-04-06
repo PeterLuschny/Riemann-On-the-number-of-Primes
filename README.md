@@ -61,3 +61,4 @@ To this end, we set the following goals:
     please send a pull request.
 
 Here you can see a [preview](http://luschny.de/math/zeta/OnTheNumberOfPrimesLessThanAGivenMagnitude.html).
+A French version using the translation of [Laugel](http://luschny.de/math/zeta/SurLeNombresPremiers.html).
