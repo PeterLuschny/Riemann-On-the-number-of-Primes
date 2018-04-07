@@ -13,6 +13,11 @@
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
+    "TeX": {
+      Macros: {
+        Li: "{\\operatorname{Li}}"
+      }
+    },
     "HTML-CSS": {
      availableFonts: [],
      preferredFont: null,
@@ -455,8 +460,8 @@ determined in order that the constant of integration vanish.
 Inserting these values in the expression for $\Pi(x)$ gives
 </p>
 <p style="color:maroon">\begin{align}
-\Pi(x)=Li(x)&amp;-\sum_\alpha \left(Li\left(x^{\frac12+\alpha i}\right)
-+Li\left(x^{\frac12-\alpha i}\right)\right)\\
+\Pi(x)=\Li(x)&amp;-\sum_\alpha \left(\Li\left(x^{\frac12+\alpha i}\right)
++\Li\left(x^{\frac12-\alpha i}\right)\right)\\
 &amp;+\int\limits_x^\infty\frac1{x^2-1}\frac{dx}{x\log x}-\log 2,
 \end{align} </p>
 <p>
@@ -467,8 +472,8 @@ discussion of the function $\xi,$ that with this ordering the sum of
 the series
 </p>
 <p style="color:maroon">\begin{equation}
-\sum_\alpha\left(Li\left(x^{\frac12+\alpha i}\right)
-+Li\left(x^{\frac12-\alpha i}\right)\right)\log x
+\sum_\alpha\left(\Li\left(x^{\frac12+\alpha i}\right)
++\Li\left(x^{\frac12-\alpha i}\right)\right)\log x
 \end{equation} </p>
 <p>
 is the same as the limit of
@@ -511,20 +516,20 @@ plus $1/2$ of the density of the prime number squares, plus $1/3$ of the
 density of the prime number cubes, plus $\ldots$ etc., of the size $x$.
 </p>
 <p>
-The known approximation $\pi(x)=Li(x)$ is therefore valid only up to
+The known approximation $\pi(x)=\Li(x)$ is therefore valid only up to
 an order of magnitude of $x^{1/2}$ and gives a somewhat too large value,
 because the non-periodic terms in the expression of $\pi(x)$ are, apart
 from terms which remain bounded as $x$ increases,
 </p>
 <p style="color:maroon">\begin{multline}
-Li(x)-\frac12Li\left(x^\frac12\right)-\frac13 Li\left(x^\frac13\right)-
-\frac15Li\left(x^\frac15\right)\\
-+\frac16Li\left(x^\frac16\right)-\frac17 Li\left(x^\frac17\right)+\ldots\,.
+\Li(x)-\frac12\Li\left(x^\frac12\right)-\frac13 \Li\left(x^\frac13\right)-
+\frac15\Li\left(x^\frac15\right)\\
++\frac16\Li\left(x^\frac16\right)-\frac17 \Li\left(x^\frac17\right)+\ldots\,.
 \end{multline} </p>
 <p>
 Indeed, in the comparison made by Gauß and Goldschmidt for $x$ up to
-three million of $Li(x)$ with the number of prime numbers less than $x$
-this number has always been less than $Li(x),$ beginning with the first
+three million of $\Li(x)$ with the number of prime numbers less than $x$
+this number has always been less than $\Li(x),$ beginning with the first
 hundred thousand; in fact the difference is gradually increasing, with
 many fluctuations.
 </p>
@@ -538,7 +543,7 @@ be established.
 the effect of the individual periodic terms contained in the formula
 for the density of the prime numbers. The function $\Pi(x)$ would show
 a more regular behavior than $\pi(x)$, which already in the first
-hundred is on average very nearly equal to $Li(x)+\log\xi(0)$.
+hundred is on average very nearly equal to $\Li(x)+\log\xi(0)$.
 </p>
 <hr style="margin-top:20px">
 <p style="font-style:italic;color:cornflowerblue;font-size:smaller">

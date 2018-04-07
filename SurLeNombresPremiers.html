@@ -13,6 +13,11 @@
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
+    "TeX": {
+      Macros: {
+        Li: "{\\operatorname{Li}}"
+      }
+    },
     "HTML-CSS": {
      availableFonts: [],
      preferredFont: null,
@@ -472,8 +477,8 @@ le premier membre de manière à faire disparaître la constante d’intégratio
 En portant ces valeurs dans l’expression de $\Pi(x)$ on obtient
 </p>
 <p style="color:maroon">\begin{align}
-\Pi(x)=Li(x)&amp;-\sum_\alpha \left(Li\left(x^{\frac12+\alpha i}\right)
-+Li\left(x^{\frac12-\alpha i}\right)\right)\\
+\Pi(x)=\Li(x)&amp;-\sum_\alpha \left(\Li\left(x^{\frac12+\alpha i}\right)
++\Li\left(x^{\frac12-\alpha i}\right)\right)\\
 &amp;+\int\limits_x^\infty\frac1{x^2-1}\frac{dx}{x\log x}-\log 2,
 \end{align}</p>
 <p>
@@ -485,8 +490,8 @@ aisément que lorsque les termes sont rangés, comme il est prescrit
 ci-dessus, dans la série
 </p>
 <p style="color:maroon">\begin{equation}
-\sum_\alpha\left(Li\left(x^{\frac12+\alpha i}\right)
-+Li\left(x^{\frac12-\alpha i}\right)\right)\log x
+\sum_\alpha\left(\Li\left(x^{\frac12+\alpha i}\right)
++\Li\left(x^{\frac12-\alpha i}\right)\right)\log x
 \end{equation}</p>
 <p>
 celle-ci converge vers la même limite que l’expression
@@ -531,22 +536,22 @@ $+$ la moitié de la densité des carrés, $+$ le tiers de celle des cubes,
 $+\ \ldots$ des entiers premiers inférieurs à $x$.
 </p>
 <p>
-La formule approchée connue $\pi(x)=Li(x)$ n’est, par conséquent, exacte
+La formule approchée connue $\pi(x)=\Li(x)$ n’est, par conséquent, exacte
 qu’aux grandeurs près de l’ordre de $x^{1/2}$ et fournit une valeur un
 peu trop grande ; car les termes non périodiques dans l’expression de
 $\pi(x)$ sont, abstraction faite de grandeurs qui ne croissent pas
 indéfiniment avec $x,$
 </p>
 <p style="color:maroon">\begin{multline}
-Li(x)-\frac12Li\left(x^\frac12\right)-\frac13 Li\left(x^\frac13\right)-
-\frac15Li\left(x^\frac15\right)\\
-+\frac16Li\left(x^\frac16\right)-\frac17 Li\left(x^\frac17\right)+\ldots\,.
+\Li(x)-\frac12\Li\left(x^\frac12\right)-\frac13 \Li\left(x^\frac13\right)-
+\frac15\Li\left(x^\frac15\right)\\
++\frac16\Li\left(x^\frac16\right)-\frac17 \Li\left(x^\frac17\right)+\ldots\,.
 \end{multline}</p>
 <p>
 Du reste, la comparaison, entreprise par Gauss et Goldschmidt, de
-$Li(x)$ avec le nombre de nombres premiers inférieurs à $x$ et poursuivie
+$\Li(x)$ avec le nombre de nombres premiers inférieurs à $x$ et poursuivie
 jusqu’à trois millions a révélé que ce nombre, à partir de la première
-centaine de mille, est toujours inférieur à $Li(x)$ et que la différence
+centaine de mille, est toujours inférieur à $\Li(x)$ et que la différence
 des valeurs, soumises à maintes oscillations, croît néanmoins toujours
 avec $x$.
 </p>
@@ -563,7 +568,7 @@ de chaque terme périodique contenu dans l’expression donnée pour la
 totalité des nombres premiers. Une marche plus régulière que celle
 donnée par $\Pi(x)$ serait obtenue à l’aide de la fonction $\pi(x)$
 qui, cela se reconnaît déjà très évidemment dans la première centaine,
-coïncide en moyenne avec $Li(x)+\log\xi(0)$.
+coïncide en moyenne avec $\Li(x)+\log\xi(0)$.
 </p>
 <hr style="margin-top:20px">
 <p style="font-style:italic;color:cornflowerblue;font-size:smaller">

@@ -15,13 +15,14 @@ It is very easy to convert the html file into a LaTeX file:
 
 (3) Insert the next lines at the beginning of the file:
 
-    \documentclass[a4paper,12pt]{article}
+    \documentclass[english,a4paper,12pt]{article}
     \usepackage[utf8]{inputenc}
     \usepackage[T1]{fontenc}
     \usepackage{babel}
     \usepackage[a4paper, left=5.5cm, textwidth=10cm]{geometry}
     \RequirePackage{amsmath}
     \RequirePackage[pdftex]{hyperref}
+    \def\Li{\operatorname{Li}}
     \title{On the Number of Primes less than a given Magnitude}
     \author{Bernhard Riemann} \date{\vspace{-4ex}}
     \begin{document}
