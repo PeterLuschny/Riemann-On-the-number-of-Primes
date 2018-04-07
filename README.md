@@ -60,5 +60,5 @@ To this end, we set the following goals:
 (6) If you discover errors or have suggestions for improvement
     please send a pull request.
 
-Here you can see a [preview](http://luschny.de/math/zeta/OnTheNumberOfPrimesLessThanAGivenMagnitude.html).
-A French version using the translation of [Laugel](http://luschny.de/math/zeta/SurLeNombresPremiers.html).
+Here you can see a [preview](http://luschny.de/math/zeta/OnTheNumberOfPrimesLessThanAGivenMagnitudeMerriweather.html).
+A French version using the translation of [Laugel](http://luschny.de/math/zeta/SurLeNombresPremiersOldStandard.html).
